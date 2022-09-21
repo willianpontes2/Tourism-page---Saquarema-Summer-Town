@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic');
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 101vh;
+    overflow: hidden;
+    margin: 2;
+}
+
+.container {
+    display: flex;
+    witdh: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    border-radius: 60px;
+    color: black;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 11px; /* espaçamento entre as caixas */
+    position:relative; /* aceita todas as propriedades do elemento -Top, right,... */
+    -webkit-transition: all 690ms ease-in; /* velocidade de transição e seu efeito*/
+}
+
+.panel h2 {
+    font-size: 25px; /* tamanho da fonte do emento selecionado */
+    position: unset; /* como o elemento está posicionado no documento */
+    bottom: 22px;
+    top: 22px;
+    left: 22px;
+    margin: 0;
+    opacity: 1;
+    padding: 22px; /* distância entre o elemento e sua borda */
+        }
+
+ .panel active {
+    flex: 7;
+        }
+
+ .panel.active h2 {
+    opacity: 1;
+    transition-property: opacity;
+    transition-delay: 0.4s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+ }
+
+ @media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    
+    .panel: nth-of-type(4);{
+      display: none;  
+    }
+     }
